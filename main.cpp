@@ -98,6 +98,21 @@ int main() {
 
         if (userInput.empty()) continue;
 
+        if (userInput == "history") {
+    std::cout << "\n===== QUERY HISTORY =====\n";
+
+        } if (queryHistory.empty()) {
+        std::cout << "No queries yet.\n";
+    } else {
+        for (size_t i = 0; i < queryHistory.size(); i++) {
+            std::cout << i + 1 << ". " << queryHistory[i] << "\n";
+        }
+    }
+
+    std::cout << "=========================\n\n";
+    continue;
+}
+
         AIRecommendation recommendation = recommendAI(userInput);
 
         std::cout << "\n-------------------------------------------------\n";
