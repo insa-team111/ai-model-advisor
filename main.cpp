@@ -112,6 +112,17 @@ int main() {
     std::cout << "=========================\n\n";
     continue;
 }
+    if (userInput == "stats") {
+std::cout << "\n===== AI MODEL USAGE =====\n";
+ 
+for (const auto& model : modelStats) {
+std::cout << model.first << " : "
+<< model.second << " recommendations\n";
+}
+ 
+std::cout << "==========================\n\n";
+continue;
+}
 
         AIRecommendation recommendation = recommendAI(userInput);
 
