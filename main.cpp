@@ -8,6 +8,8 @@ struct AIRecommendation {
     std::string modelName;
     std::string primaryUseCase;
     std::string whySelected;
+    std::vector<std::string> queryHistory;
+    std::map<std::string, int> modelStats;
 };
 
 // Convert string to lowercase for case-insensitive matching
